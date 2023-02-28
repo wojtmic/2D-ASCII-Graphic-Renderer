@@ -11,22 +11,22 @@ class cell():
     def getY(self):
         return self.y
 
+height = 5
+width = 5 + 1
+
 def getCell(x,y):
     for celll in cells:
-        for xfind in range(x):
-            for yfind in range(y):
-                if celll.getX() == xfind and celll.getY() == yfind:
+        for xfind in range(height):
+            for yfind in range(width):
+                if celll.getX() == x and celll.getY() == y:
                     return celll
 
 cells = []
 
-height = 5
-width = 5 + 1
-
 for y in range(height):
     for x in range(width):
-        if y == 3 and x == 3:
-            cells.append(cell(x=x,y=y,icon="x",type="debug"))
+        if y == 0 and x == 0:
+            cells.append(cell(type="debug",icon="x",x=x,y=y))
         else:
             cells.append(cell(x=x,y=y))
 
