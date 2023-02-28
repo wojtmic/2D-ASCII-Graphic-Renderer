@@ -11,8 +11,8 @@ class cell():
     def getY(self):
         return self.y
 
-height = 5
-width = 5 + 1
+height = 10
+width = 10
 
 def getCell(x,y):
     for celll in cells:
@@ -26,7 +26,7 @@ cells = []
 for y in range(height):
     for x in range(width):
         if y == 0 and x == 0:
-            cells.append(cell(type="debug",icon="x",x=x,y=y))
+            cells.append(cell(type="glob",icon="G",x=x,y=y))
         else:
             cells.append(cell(x=x,y=y))
 
